@@ -1,18 +1,22 @@
 variable "name" {
   type = string
+  description = "The name of this stack. This will be used in the names of all resources created by this module"
 }
 
 variable "vpc_id" {
   type = string
+  description = "The ID of the VPC where the bastion should run"
 }
 
 variable "subnets" {
   type = list(string)
+  description = "The IDs of the subnets where the bastion should run"
 }
 
 variable "security_groups" {
   type    = list(string)
   default = []
+  description = "The IDs of the security groups to attach to the bastion task"
 }
 
 variable "task_cpu" {

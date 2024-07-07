@@ -74,12 +74,12 @@ No modules.
 | <a name="input_assign_public_ip"></a> [assign\_public\_ip](#input\_assign\_public\_ip) | Whether to assign a public IP to the bastion task. If false, you will need a NAT gateway or at least SSM & ECR VPC endpoints | `bool` | `false` | no |
 | <a name="input_create_default_security_group"></a> [create\_default\_security\_group](#input\_create\_default\_security\_group) | Whether to create a default security group allowing all outbound traffic for the bastion task. If false, you will need to provide your own in `security_groups` | `bool` | `true` | no |
 | <a name="input_desired_count"></a> [desired\_count](#input\_desired\_count) | Number of instances of the bastion task to run | `number` | `1` | no |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
-| <a name="input_security_groups"></a> [security\_groups](#input\_security\_groups) | n/a | `list(string)` | `[]` | no |
-| <a name="input_subnets"></a> [subnets](#input\_subnets) | n/a | `list(string)` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | The name of this stack. This will be used in the names of all resources created by this module | `string` | n/a | yes |
+| <a name="input_security_groups"></a> [security\_groups](#input\_security\_groups) | The IDs of the security groups to attach to the bastion task | `list(string)` | `[]` | no |
+| <a name="input_subnets"></a> [subnets](#input\_subnets) | The IDs of the subnets where the bastion should run | `list(string)` | n/a | yes |
 | <a name="input_task_cpu"></a> [task\_cpu](#input\_task\_cpu) | Number of CPU units to allocate for the bastion task | `number` | `256` | no |
 | <a name="input_task_memory"></a> [task\_memory](#input\_task\_memory) | Amount of memory (in MiB) to allocate for the bastion task | `number` | `512` | no |
-| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | n/a | `string` | n/a | yes |
+| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | The ID of the VPC where the bastion should run | `string` | n/a | yes |
 
 ## Outputs
 
