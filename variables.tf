@@ -40,7 +40,7 @@ variable "desired_count" {
 variable "assign_public_ip" {
   type        = bool
   default     = false
-  description = "Whether to assign a public IP to the bastion task. If false, you will need a NAT gateway or at least SSM & ECR VPC endpoints"
+  description = "Whether to assign a public IP to the bastion task. If false, you will need a NAT gateway or at least ECR, SSM & SSM Messages VPC endpoints"
 }
 
 variable "create_default_security_group" {

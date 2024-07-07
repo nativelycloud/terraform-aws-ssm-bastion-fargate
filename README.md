@@ -9,7 +9,7 @@ Although designed for seamless use with our [terraform-aws-ssm-tunnel](https://g
 - Supports all TCP port forwarding use cases through AWS SSM Session Manager
 - Auto-healing if the bastion task fails or if there are underlying infrastructure issues
 - Customizable CPU and memory allocation for the Fargate task
-- Optionally assign a public IP to the bastion task if you don't have a NAT gateway or SSM & ECR VPC endpoints
+- Optionally assign a public IP to the bastion task if you don't have a NAT gateway or ECR, SSM & SSM Messages VPC endpoints
 - Optionally run multiple concurrent instances of the bastion task for high availability
 
 ### Comparisons
@@ -71,7 +71,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_assign_public_ip"></a> [assign\_public\_ip](#input\_assign\_public\_ip) | Whether to assign a public IP to the bastion task. If false, you will need a NAT gateway or at least SSM & ECR VPC endpoints | `bool` | `false` | no |
+| <a name="input_assign_public_ip"></a> [assign\_public\_ip](#input\_assign\_public\_ip) | Whether to assign a public IP to the bastion task. If false, you will need a NAT gateway or at least ECR, SSM & SSM Messages VPC endpoints | `bool` | `false` | no |
 | <a name="input_create_default_security_group"></a> [create\_default\_security\_group](#input\_create\_default\_security\_group) | Whether to create a default security group allowing all outbound traffic for the bastion task. If false, you will need to provide your own in `security_groups` | `bool` | `true` | no |
 | <a name="input_desired_count"></a> [desired\_count](#input\_desired\_count) | Number of instances of the bastion task to run | `number` | `1` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of this stack. This will be used in the names of all resources created by this module | `string` | n/a | yes |
