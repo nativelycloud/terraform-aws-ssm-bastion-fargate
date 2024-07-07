@@ -23,7 +23,16 @@ Although designed for seamless use with our [terraform-aws-ssm-tunnel](https://g
 - **Built-in High Availability** — the ECS service is self-healing as any issue will cause the taks to be redeployed and several instances can optionally across multiple Availability Zones
 - **Cost-effective** — the cost is roughly the same as in EC2, with all the added benefits above.
 
+### Costs
+In the default configuration, in `eu-west-1` and as of this writing, the costs are:
+| Resource | Cost | Estimated monthly cost |
+| --- | --- | --- |
+| Fargate Task (0.25 vCPU, 0.5 GB) | $0.009875 per hour | $7.21 |
+
+**Estimated total**: $7.21 per month
+
 ### Upcoming features
+- ARM support
 - Fargate Spot support
 - IPv6 support (dualstack and IPv6-only)
 
